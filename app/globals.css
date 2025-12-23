@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+@import 'tailwindcss';
+/* Add to your global CSS or component CSS */
+.nav_bg {
+  background: linear-gradient(135deg, rgba(13, 21, 40, 0.8) 0%, rgba(26, 43, 77, 0.8) 100%);
+  backdrop-filter: blur(10px);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #030014;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.cursive {
+  font-family: 'Cedarville Cursive', cursive;
+}
+.gradient-text {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+      135deg,
+      rgb(79, 168, 225),
+      rgb(90, 116, 193),
+      rgb(87, 64, 161)
+    )
+    text;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    to right,
+    oklch(0.45 0.15 290),
+    oklch(0.5 0.18 260)
+  );
+  box-shadow: oklch(0.45 0.15 290 / 0.3) 0px 0px 20px;
+}
+/* 
+ {
+  border-color: oklch(0.85 0.18 130 / 0.5);
+  background-color: oklch(0.85 0.18 130 / 0.2);
+} */
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.inter {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+button {
+  cursor: pointer;
+}
+.main_blur {
+  backdrop-filter: blur(404px);
+}
+
+.Welcome-text {
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+    linear-gradient(90.01deg, #ffc49c 0.01%, #ff9c9c 50.01%, #fff09c 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+}
+
+.arrow {
+  font-size: 48px;
+  color: #000;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
